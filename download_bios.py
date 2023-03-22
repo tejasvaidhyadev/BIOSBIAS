@@ -32,7 +32,7 @@ parser.add_argument("-o", "--output", dest="output",
 
 parser.add_argument("-r", "--retries", dest="retries", type=int, default=2, help="number of retries per path")
 
-parser.add_argument("-p", "--parallel", dest="parallel", type=int, default=0,
+parser.add_argument("-p", "--parallel", dest="parallel", type=int, default=cpu_count(),
                     help="number of parallel threads", metavar="N")
 
 args = parser.parse_args()
